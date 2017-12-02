@@ -3,18 +3,20 @@ body{
     padding: 0;
 }
 #fields{
-    width: 1000px;
+    width: 900px;
     margin: 10px auto;
 }
 #MLA{
     text-align: right;
-    margin-right: 75%;
+    margin-right: 70%;
 }
-textarea{
+.user{
+    display: block;
+    width: 100%;
     font-family: "Times New Roman";
     font-size: 12pt;
-    line-spacing: 2;
-    width: 85%;
+    line-height: 2;
+    margin: 0 auto;
 }
 #copyBtn{
     height: 40px;
