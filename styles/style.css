@@ -1,0 +1,22 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+#fields{
+    width: 1000px;
+    margin: 10px auto;
+}
+#MLA{
+    text-align: right;
+    margin-right: 75%;
+}
+textarea{
+    font-family: "Times New Roman";
+    font-size: 12pt;
+    line-spacing: 2;
+    width: 85%;
+}
+#copyBtn{
+    height: 40px;
+    width: 80px;
+}

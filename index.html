@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ILC-MLA</title>
+    <link href="styles/style.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+    <div id="fields">
+        <div class="interact">
+            <textarea class="user" id="input" tabindex="1" spellcheck="false" placeholder="paste raw text" rows="20" oninput="format()"></textarea>
+            <div id="MLA">
+                <p id="author">
+                    Author:
+                    <input type="text" id="authorIn" oninput="format()">
+                </p>
+                <p id="page">
+                    Page Number:
+                    <input type="text" id="pageNum" oninput="format()">
+                </p>
+            </div>
+        </div>
+        <div>
+            <textarea class="user" id="output" tabindex="2" spellcheck="false"placeholder="fixed goes here" rows="20"></textarea>
+        </div>
+        <div>
+            <button id="copyBtn" onclick="copyOut();">Copy</button>
+        </div>
+    </div>
+<script src="scripts/main.js"></script>
+</body>
+</html>
