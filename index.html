@@ -17,16 +17,16 @@
             <div id="MLA">
                 <p id="author">
                     Author:
-                    <input type="text" id="authorIn" oninput="format()">
+                    <input type="text" id="authorIn" tabindex="2" oninput="format()">
                 </p>
                 <p id="page">
                     Page Number:
-                    <input type="text" id="pageNum" oninput="format()">
+                    <input type="text" id="pageNum" tabindex="3" oninput="format()">
                 </p>
             </div>
         </div>
         <div class="inOut">
-            <textarea class="user" id="output" tabindex="2" spellcheck="false"placeholder="fixed goes here" rows="11"></textarea>
+            <textarea class="user" id="output" tabindex="4" spellcheck="false"placeholder="fixed goes here" rows="11"></textarea>
         </div>
         <div>
             <button id="copyBtn" onclick="copyOut();">Copy</button>
