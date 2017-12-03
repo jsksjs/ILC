@@ -16,7 +16,7 @@ function copyOut(){
 function scrubText()
 {
     let text = document.getElementById("input").value;
-    let fixed = "\"" + text.replace(/(\r\n|\r|\n)/gm, " ").replace(/"/gm, "'") + "\"";
+    let fixed = "\u201C" + text.replace(/(\r\n|\r|\n)/gm, " ").replace(/"/gm, "'").replace(/-\s+/gm, "").trim() + "\u201D";
     let author = document.getElementById("authorIn").value;
     let page = document.getElementById("pageNum").value;
     if(author.length === 0 && page.length === 0){
