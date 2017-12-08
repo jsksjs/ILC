@@ -1,3 +1,11 @@
+// blur background
+function menu(){
+    let m = document.getElementById("optionsContainer");
+    m.classList.toggle("shown");
+    m.classList.toggle("hidden");
+}
+
+
 // called on input change
 function format(){
     if(document.getElementById("input").value.length > 0)
