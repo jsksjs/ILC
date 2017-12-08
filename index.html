@@ -1,37 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>ILC-MLA</title>
-    <link href="styles/style.css" rel="stylesheet" type="text/css">
-</head>
-<body>
-    <div id="header">
-        <header>In-Text Citations MLA</header>
-    </div>
-    <div id="fields">
-        <div class="interact">
-            <div class="inOut">
-                <textarea class="user" id="input" tabindex="1" spellcheck="false" placeholder="paste raw text" rows="11" oninput="format()"></textarea>
+    <head>
+        <meta charset="UTF-8">
+        <title>ILC</title>
+        <link href="styles/style.css" rel="stylesheet" type="text/css">
+    </head>
+    <body>
+        <header>
+            <ul id="nav">
+                <li id="listTitle"><a>In-Text Citations</a></li>
+                <li id="options" class="select" onclick="menu()"><a>Options</a></li>
+            </ul>
+        </header>
+        <div id="fields">
+            <div class="interact">
+                <div class="inOut">
+                    <textarea class="user" id="input" tabindex="1" spellcheck="false" placeholder="paste raw text" rows="11" oninput="format()"></textarea>
+                </div>
+                <div id="MLA">
+                    <p id="author">
+                        Author:
+                        <input type="text" id="authorIn" tabindex="2" oninput="format()">
+                    </p>
+                    <p id="page">
+                        Page Number:
+                        <input type="text" id="pageNum" tabindex="3" oninput="format()">
+                    </p>
+                </div>
+                <div class="inOut">
+                    <textarea class="user" id="output" tabindex="4" spellcheck="false" placeholder="fixed goes here" rows="11"></textarea>
+                </div>
+                <div>
+                    <button id="copyBtn" onclick="copyOut();">Copy</button>
+                </div>
             </div>
-            <div id="MLA">
-                <p id="author">
-                    Author:
-                    <input type="text" id="authorIn" tabindex="2" oninput="format()">
-                </p>
-                <p id="page">
-                    Page Number:
-                    <input type="text" id="pageNum" tabindex="3" oninput="format()">
-                </p>
+        </div>
+        <div id="optionsContainer" onclick="menu()" class="hidden">
+            <div id="menu">
+
             </div>
         </div>
-        <div class="inOut">
-            <textarea class="user" id="output" tabindex="4" spellcheck="false"placeholder="fixed goes here" rows="11"></textarea>
-        </div>
-        <div>
-            <button id="copyBtn" onclick="copyOut();">Copy</button>
-        </div>
-    </div>
-<script src="scripts/main.js"></script>
-</body>
+    <script src="scripts/main.js"></script>
+    </body>
 </html>
