@@ -1,13 +1,60 @@
-#header{
-    text-align: center;
-    background: beige;
-    font-family: "Times New Roman";
-    font-size: 18pt;
-    line-height: 2;
-    border-bottom: 2px solid black;
-}
 html{
     height: 100vh;
+}
+header{
+    box-sizing: border-box;
+    position: relative;
+    width: 100%;
+    padding: 0;
+    background: beige;
+    border-bottom: 2px solid black;
+    overflow:auto; zoom: 1;
+}
+#nav{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+#nav li{
+    display: flex;
+    align-items: stretch;
+    font-family: "Times New Roman";
+    line-height: 2;
+    padding: 0 1% 0 1%;
+    border-right: 2px solid black;
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+}
+#nav li:last-child{
+    border-right-style: none;
+}
+#listTitle{
+    font-size: 18pt;
+}
+#listTitle a{
+    display: flex;
+    align-self: center;
+}
+#listTitle:hover{
+    cursor: default;
+}
+.select{
+    display: flex;
+    align-self: stretch;
+    font-size: 13pt;
+}
+.select a{
+    display: flex;
+    align-self: center;
+}
+.select:hover{
+    cursor: pointer;
+    background-color: hsla(0, 0%, 75%, 1);
 }
 body{
     height: 100vh;
@@ -20,7 +67,7 @@ body{
     height: 100vh;
     width: 900px;
     margin: 0 auto;
-    padding: 30px 30px 0 30px;
+    padding: 1% 30px 0 30px;
     background: tan;
 }
 #author{
@@ -50,4 +97,22 @@ body{
 #copyBtn{
     height: 40px;
     width: 80px;
+}
+#optionsContainer{
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: rgba(0,0,0,0.5);
+}
+.hidden{
+    opacity: 0;
+    visibility: hidden;
+}
+.shown{
+    opacity: 1;
+    visibility: visible;
+    transition: visibility 0s, opacity 0.25s linear;
+    -moz-transition: visibility 0s, opacity 0.25s linear;
 }
