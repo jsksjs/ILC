@@ -8,8 +8,8 @@
     <body>
         <header>
             <ul id="nav">
-                <li id="listTitle"><a>In-Text Citations</a></li>
-                <li id="options" class="select" onclick="menu()"><a>Options</a></li>
+                <li id="listTitle"><a>In-Line Citations</a></li>
+                <li id="options" class="selection"><a>Options</a></li>
             </ul>
         </header>
         <div id="fields">
@@ -17,7 +17,7 @@
                 <div class="inOut">
                     <textarea class="user" id="input" tabindex="1" spellcheck="false" placeholder="paste raw text" rows="11" oninput="format()"></textarea>
                 </div>
-                <div id="MLA">
+                <div id="info">
                     <p id="author">
                         Author:
                         <input type="text" id="authorIn" tabindex="2" oninput="format()">
@@ -35,9 +35,30 @@
                 </div>
             </div>
         </div>
-        <div id="optionsContainer" onclick="menu()" class="hidden">
-            <div id="menu">
-
+        <div id="popup" class="hidden">
+            <div id="menuContainer">
+                <ul id="menu">
+                    <li class="optionContainer">
+                        <div class ="option">
+                            <div class="optionTag">Style</div>
+                            <select id="style">
+                                <option value="MLA">MLA8</option>
+                                <option value="APA">APA6</option>
+                                <option value="TUR">TUR8</option>
+                            </select>
+                        </div>
+                    </li>
+                    <li id="steel" class="optionContainer">
+                        <div class="option">
+                            <div class="optionTag">Style</div>
+                            <select>
+                                <option value="MLA">MLA8</option>
+                                <option value="APA">APA6</option>
+                                <option value="TUR">TUR8</option>
+                            </select>
+                        </div>
+                    </li>
+                </ul>
             </div>
         </div>
     <script src="scripts/main.js"></script>
