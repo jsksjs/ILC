@@ -43,16 +43,16 @@ header{
 #listTitle:hover{
     cursor: default;
 }
-.select{
+.selection{
     display: flex;
     align-self: stretch;
     font-size: 13pt;
 }
-.select a{
+.selection a{
     display: flex;
     align-self: center;
 }
-.select:hover{
+.selection:hover{
     cursor: pointer;
     background-color: hsla(0, 0%, 75%, 1);
 }
@@ -78,7 +78,7 @@ body{
     padding: 5px 0 10px 0;
     margin: 0;
 }
-#MLA{
+#info{
     text-align: right;
     margin: 0 70% 0 0;
 }
@@ -98,13 +98,47 @@ body{
     height: 40px;
     width: 80px;
 }
-#optionsContainer{
-    position: fixed;
+#popup{
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    position: absolute;
     top: 0;
     left: 0;
     height: 100%;
     width: 100%;
     background: rgba(0,0,0,0.5);
+}
+#menuContainer{
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 6vh;
+    background: white;
+}
+#menu{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.optionContainer{
+    padding: 5% 5% 0 5%;
+    font-family: "Courier New";
+    font-size: 20pt;
+    line-height: 2;
+}
+.optionContainer:last-child{
+    padding: 5%;
+}
+.optionTag{
+    display: inline-block;
+}
+select{
+    font-family: "Courier New";
+    font-size: 16pt;
+    line-height: 2;
 }
 .hidden{
     opacity: 0;
