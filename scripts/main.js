@@ -1,10 +1,18 @@
-// blur background
-function menu(){
-    let m = document.getElementById("optionsContainer");
-    m.classList.toggle("shown");
-    m.classList.toggle("hidden");
-}
+// blur background on options button click
+document.getElementById("options").addEventListener('click', function(){
+    let m = document.getElementById("popup").classList;
+    m.toggle("shown");
+    m.toggle("hidden");
+}, false);
 
+// blur background on popup click
+document.getElementById("popup").addEventListener('click', function(event){
+    let m = document.getElementById("popup").classList;
+    if(event.target === this){
+        m.toggle("shown");
+        m.toggle("hidden");
+    }
+}, false);
 
 // called on input change
 function format(){
@@ -20,7 +28,7 @@ function copyOut(){
     document.execCommand('copy');
 }
 
-// formats MLA standard with proper capitalization and page numbers
+// formats with proper capitalization and page numbers
 function scrubText()
 {
     let text = document.getElementById("input").value;
