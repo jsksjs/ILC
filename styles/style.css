@@ -1,14 +1,16 @@
 html{
-    height: 100vh;
+    height: 100%;
+    overflow: hidden;
 }
 header{
     box-sizing: border-box;
     position: relative;
     width: 100%;
     padding: 0;
-    background: beige;
+    background: hsla(35, 45%, 70%, 1);
     border-bottom: 2px solid black;
-    overflow:auto; zoom: 1;
+    overflow:auto;
+    zoom: 1;
 }
 #nav{
     display: flex;
@@ -25,6 +27,7 @@ header{
     line-height: 2;
     padding: 0 1% 0 1%;
     border-right: 2px solid black;
+    background: hsla(35, 25%, 100%, 0.8);
 }
 #nav li a{
     flex: 1;
@@ -41,49 +44,60 @@ header{
 }
 .selection:hover{
     cursor: pointer;
-    background-color: hsla(0, 0%, 75%, 1);
+    background: hsla(0, 0%, 75%, 1);
 }
 body{
-    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
     margin: 0;
     padding: 0;
     background: white;
-    overflow: hidden;
+}
+#main{
+    display: flex;
+    flex-direction: row;
+    align-self: center;
+    flex: 1 1 auto;
+    min-width: 0;
+    width: 900px;
+    max-width: 900px;
+    padding: 30px;
+    background: hsla(35, 45%, 70%, 1);
 }
 #fields{
-    height: 100vh;
-    width: 900px;
-    margin: 0 auto;
-    padding: 1% 30px 0 30px;
-    background: tan;
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 auto;
 }
-#author{
-    padding: 10px 0 5px 0;
-    margin: 0;
-}
-#page{
-    padding: 5px 0 10px 0;
-    margin: 0;
-}
-#info{
-    text-align: right;
-    padding: 0 70% 0 0;
+#infoContainer{
+    display:flex;
+    flex-direction: row;
+    flex: 0;
     background: hsla(0, 0%, 65%, 0.5);
 }
-.optionLabel{
-    display: inline-block;
+#info{
+    display: flex;
+    flex-direction: column;
+}
+.input{
+    align-self: right;
+}
+.inOut{
+    display:flex;
+    flex-direction: column;
+    flex: 1 1 auto;
 }
 .user{
     box-sizing: border-box;
+    resize: none;
+    flex: 1 1 auto;
     width: 100%;
     font-family: "Times New Roman";
     font-size: 12pt;
     line-height: 2;
-    margin: 0 auto;
-    min-width: 50%;
-    max-width: 100%;
-    min-height: 100px;
-    max-height: 40vh;
+    margin: 0;
 }
 #copyBtn{
     height: 40px;
@@ -95,21 +109,27 @@ body{
     position: absolute;
     top: 0;
     left: 0;
-    height: 100vh;
-    width: 100vw;
+    height: 100%;
+    width: 100%;
     background: rgba(0,0,0,0.5);
 }
 #menuContainer{
-    margin: 7vh auto;
+    position: relative;
+    margin: auto;
     background: white;
     border: 1px solid black;
 }
 #menu{
+    display: flex;
+    flex-direction: column;
     margin: auto;
     list-style: none;
     padding: 10px 10px 10px 10px;
 }
 .optionContainer{
+    display: flex;
+    flex-direction: row;
+    flex: 1;
     font-family: "Courier New";
     font-size: 20pt;
     line-height: 2;
@@ -117,17 +137,20 @@ body{
 .option{
     display: flex;
     flex-direction: row;
+    flex: 1;
 }
 .optionTag{
     flex: 1;
-    text-align: right;
+    text-align: left;
     padding-right: 20px;
 }
 .selectionContainer{
     flex: 1;
+    justify-content: center;
     text-align: center;
 }
 .optionSelection{
+    margin: auto;
     font-family: "Courier New";
     font-size: 16pt;
     line-height: 2;
