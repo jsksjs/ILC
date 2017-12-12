@@ -14,6 +14,12 @@ document.getElementById("popup").addEventListener('click', function(event){
     }
 }, false);
 
+// change page colors
+function color(event){
+    document.getElementById("main").style.background = event.value;
+    document.getElementsByTagName("header")[0].style.background = event.value;
+}
+
 // called on input change
 function format(){
     if(document.getElementById("input").value.length > 0)
