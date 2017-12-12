@@ -12,23 +12,25 @@
                 <li id="options" class="selection"><a>Options</a></li>
             </ul>
         </header>
-        <div id="fields">
-            <div class="interact">
+        <div id="main">
+            <div id="fields">
                 <div class="inOut">
-                    <textarea class="user" id="input" tabindex="1" spellcheck="false" placeholder="paste raw text" rows="11" oninput="format()"></textarea>
+                    <textarea class="user" id="input" tabindex="1" spellcheck="false" placeholder="paste raw text" rows="6" oninput="format()"></textarea>
                 </div>
-                <div id="info">
-                    <div id="author">
-                        <div class="optionLabel noSelect">Author: </div>
-                        <input type="text" id="authorIn" tabindex="2" oninput="format()">
-                    </div>
-                    <div id="page">
-                        <div class="optionLabel noSelect">Page Number: </div>
-                        <input type="text" id="pageNum" tabindex="3" oninput="format()">
+                <div id="infoContainer">
+                    <div id="info">
+                        <div id="author" class="input">
+                            <label for="authorIn" class="optionLabel noSelect">Author: </label>
+                            <input type="text" id="authorIn" tabindex="2" oninput="format()">
+                        </div>
+                        <div id="page" class="input">
+                            <label for="pageNum" class="optionLabel noSelect">Page Number: </label>
+                            <input type="text" id="pageNum" tabindex="3" oninput="format()">
+                        </div>
                     </div>
                 </div>
                 <div class="inOut">
-                    <textarea class="user" id="output" tabindex="4" spellcheck="false" placeholder="fixed goes here" rows="11"></textarea>
+                    <textarea class="user" id="output" tabindex="4" spellcheck="false" placeholder="fixed goes here" rows="6"></textarea>
                 </div>
                 <div>
                     <button id="copyBtn" onclick="copyOut();">Copy</button>
@@ -38,7 +40,7 @@
         <div id="popup" class="hidden">
             <div id="menuContainer">
                 <ul id="menu">
-                    <li class="optionContainer noSelect">
+                    <li class="optionContainer noSelect" onmouseover="setFocus('style');">
                         <div class ="option">
                             <label class="optionTag" for="style">Style</label>
                             <div class="selectionContainer">
@@ -64,6 +66,14 @@
                             <label class="optionTag" for="abc">Test</label>
                             <div class="selectionContainer">
                                 <input id="abc" type="checkbox" class="optionSelection">
+                            </div>
+                        </div>
+                    </li>
+                    <li class="optionContainer noSelect">
+                        <div class="option">
+                            <label id="colorTag" class="optionTag" for="color">Color</label>
+                            <div class="selectionContainer">
+                                <input id="color" value="#D5B890" onchange="color(this);" type="color" class="optionSelection">
                             </div>
                         </div>
                     </li>
