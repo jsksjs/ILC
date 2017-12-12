@@ -16,8 +16,8 @@ document.getElementById("popup").addEventListener('click', function(event){
 
 // change page colors
 function color(event){
-    document.getElementById("main").style.background = event.value;
-    document.getElementsByTagName("header")[0].style.background = event.value;
+    document.getElementById("main").style.backgroundColor = event.value;
+    document.getElementsByTagName("header")[0].style.backgroundColor = event.value;
 }
 
 // called on input change
